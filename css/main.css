@@ -1,10 +1,15 @@
+
+/* Base styles have a high contract color to improve readability  */
 body {
   font-family: 'Roboto', Helvetica, sans-serif;
-  background-color: grey;
+  background-color: #f5f5f5;
+  color: #111;
   margin: 0;
   padding: 0;
 }
 
+
+/* Headings have a decorative font with readable fallbacks */
 h1,
 h2,
 h3,
@@ -14,15 +19,20 @@ h6 {
   font-family: 'Stick No Bills', 'Roboto', Helvetica, sans-serif;
 }
 
+/* Max-width prevents from overstretching on large screens */
 .container {
   max-width: 1080px;
   margin: 0 auto;
   padding: 0 1rem;
 }
 
+/* Resizing images scale to match within the containers */
 img {
   width: 100%;
+  height: auto;
 }
+
+/* ========== NAVIGATION ========== */
 
 .main-nav ul {
   list-style: none;
@@ -42,30 +52,39 @@ img {
   color: inherit;
   text-decoration: none;
   font-size: 1.25rem;
+  padding: 1rem;
 }
+
+/* ========== FORMS ========== */
 
 form input,
 form textarea {
   display: block;
   width: 100%;
   margin-bottom: 1rem;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #333;
 }
 
+/* Textarea allows vertical resizing for accessibility */
 form textarea {
   min-height: 150px;
-  max-height: 150px;
-  height: 150px;
-  resize: none;
+  resize: vertical;
 }
 
+/* Button styling provides  */
 form button {
   background: none;
   border: 2px solid black;
   padding: 1rem;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
+/* ========== FOOTER ========== */
+/* Footer is centered */
 .site-footer {
   padding: 2rem 0;
+  text-align: center;
+  font-size: 0.9rem;
 }
