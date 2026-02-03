@@ -5,64 +5,96 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Accessible Me</title>
+  <title>Jam Box Studios</title>
+  <!-- google fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&family=Stick+No+Bills:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
+
+    <script type="application/ld+json">
+        {
+            
+        }
+    </script>
+
 </head>
 
 <body>
   <div class="container">
-    <div class="site-header">
+    <!-- Header with site branding and navigation -->
+    <header class="site-header" role="banner">
       <h1>Jam Box Studios</h1>
-      <div class="main-nav">
+      <nav class="main-nav" role="navigation" aria-label="Main navigation">
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">Products</a></li>
           <li><a href="#">Reservation</a></li>
           <li><a href="#">Studio</a></li>
         </ul>
-      </div>
-      <img src="https://placekitten.com/1200/900" class="banner">
-    </div>
-    <div class="main-content">
-      <h1>Welcome to Jam Box</h1>
+    </nav>
+
+    <!-- Banner image with alt text -->
+      <img src="https://picsum.photos/1200/900" class="banner" alt="Wide banner image for Jam Box Studios">
+    </header>
+
+    <!-- Main page content -->
+    <main id="main-content" class="main-content" role="main">
+        <!-- Heading changed and starts at h2 to avoid multiple h1 tags -->
+      <h2>Welcome to Jam Box</h2>
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus laboriosam praesentium nostrum ipsa eveniet, officia deserunt cumque eius esse enim, ipsam accusantium autem nihil quaerat sequi perferendis optio quia veritatis.</p>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam perferendis expedita sed itaque odit ipsam omnis, eos voluptates magni fugit culpa voluptatibus, inventore eaque, eligendi voluptatum! Voluptate iusto error voluptatibus.</p>
-      <div class="owner">
-        <h1>Meet the owner</h1>
+
+      <section class="owner" aria-labelledby="owner-heading">
+        <h2 id="owner-heading">Meet the owner</h2>
         <ul>
-          <li>Name: John Doe</li>
-          <li>Title: CEO</li>
-          <li>Email: johnjoe@jambox.ca</li>
-          <li>Phone: 613-000-0000</li>
+          <li><strong>Name:</strong> John Doe</li>
+          <li><strong>Title:</strong> CEO</li>
+          <li>
+            <strong>Email:</strong>johnjoe@jambox.ca</li>
+          <li><strong>Phone:</strong> 613-000-0000</li>
         </ul>
-        <h1>Address</h1>
-        <p>
+
+        <h3>Address</h3>
+        <!-- Address for contact information -->
+        <address>
           Jambox Studios
           123 Guitar Road,
           Musicville, Danceistan
           B3T 0L0
-        </p>
-      </div>
-      <div class="contact-section">
-        <h1>Contact Us</h1>
-        <form action="thanks.html">
-          <label>Full Name</label>
-          <input type="text" placeholder="Full Name">
-          <input type="text" placeholder="Email">
-          <input type="text" placeholder="Subject">
-          <b>Your Message</b>
-          <textarea></textarea>
-          <button type="submit">Send</button>
-        </form>
-      </div>
-    </div>
-    <div class="site-footer">
-      &copy; 2021 Jam Box Studios
-    </div>
-  </div>
-</body>
+        </address>
+    </section>
 
+    <!-- Contact section -->
+      <section class="contact-section" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Contact Us</h2>
+        <!-- form field properly labeled -->
+        <form action="thanks.html" method="post">
+
+            <label for="fullname">Full name</label>
+            <input id="fullname" name="fullname" type="text" required>
+
+            <label for="email">Email</label>
+            <input id="fullname" name="fullname" type="text" required>
+
+            <label for="subject">Subject</label>
+            <input id="subject" name="subject" type="text">
+
+            <label for="message">Your Message</label>
+            <textarea name="message" id="message" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>     
+    </section>
+
+    </main>
+
+    <!-- Footer class shows site-wid information -->
+    <footer class="site-footer" role="contentinfo">
+      <p>&copy; 2021 Jam Box Studios</p>
+    </footer>
+
+  </div>
+
+</body>
 </html>
